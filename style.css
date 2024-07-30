@@ -1,0 +1,940 @@
+/* Resetări de bază */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Stiluri pentru header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 120px;
+    height: auto;
+}
+header nav {
+    margin-left: auto;
+    /* Adaugă acest rând pentru a împinge meniul spre dreapta */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Stiluri pentru secțiunea hero */
+.hero-home, .hero-contact{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 2em;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1em 2em;
+    margin: 0.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #384c5a;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #a8a4a3;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+.services {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33% - 2em);
+    margin-bottom: 2em;
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Stiluri pentru secțiunea hero a paginii de servicii */
+.hero {
+    background: url('Our\ Services.mp4') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Stiluri pentru secțiunea servicii */
+.service-detail {
+    padding: 2em 1em;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.service-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.service-detail img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.service-detail p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.reviews {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Stiluri pentru secțiunea servicii */
+.services {
+    padding: 2em 1em;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+}
+
+.services h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33% - 2em);
+    margin-bottom: 2em;
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.service-item p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.service-item .btn-primary {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #384c5a;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-item .btn-primary:hover {
+    opacity: 0.9;
+}
+/* Styles for Service 1 Page */
+#hero-service1 {
+    background: url('hero-service1.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.service-details {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.service-details p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.service-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.service-images img {
+    max-width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews {
+    padding: 2em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.reviews p {
+    font-size: 1.2em;
+}
+/* About section styles */
+/* CSS pentru pagina About Us */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section {
+    position: relative;
+    background: url('about') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.hero-section .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.hero-section .info-blocks {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.hero-section .info-block {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.hero-section .info-block h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-section .info-block p {
+    font-size: 1em;
+}
+
+/* Stiluri pentru secțiunea contact */
+.contact-section {
+    padding: 2em 1em;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #384c5a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #2e3e4e;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 0.5em;
+}
+/* Stiluri pentru secțiunea contact-methods */
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 0;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.contact-methods .method {
+    flex: 1;
+    padding: 5%;
+}
+
+.contact-methods .method img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.contact-methods .method h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.contact-methods .method p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-methods .method a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-methods .method a:hover {
+    text-decoration: underline;
+}
+
+
+/* Stiluri pentru secțiunea de contact */
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 1em;
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.method {
+    flex: 1;
+    text-align: center;
+    padding: 1em;
+}
+
+.method img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1em;
+}
+
+.method h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.method p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.btn-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+/* Stiluri pentru secțiunea customer-care */
+.customer-care {
+    padding: 5em 1em;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.customer-care h2 {
+    margin-bottom: 0;
+}
+
+.customer-care p {
+    margin-bottom: 0;
+}
+
+/* Stiluri pentru hartă */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 0; /* Elimină spațiul alb dintre secțiuni */
+    border: none; /* Elimină marginile */
+    padding: 0; /* Elimină padding-ul */
+}
+/* Stiluri pentru footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.footer-info .column {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.footer-info .column h3 {
+    margin-bottom: 0.5em;
+}
+
+.footer-info .column p {
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        flex-direction: column;
+    }
+
+    .footer-info .column {
+        padding: 0.5em 0;
+    }
+}
+/* Stiluri pentru secțiunea About Us  de pe pagina index.html*/
+.about-us {
+    padding: 2em 1em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us .section-title {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.about-us .info-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.about-us .info-block {
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.about-us .info-block h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.about-us .info-block p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Media Queries pentru dispozitive mobile */
+@media (max-width: 768px) {
+    .about-us .info-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .info-block {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+/*review servicii 1*/
+/* Stiluri pentru recenzii */
+.customer-reviews {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #f4f4f4;
+}
+
+.customer-reviews h2 {
+    margin-bottom: 1em;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.review img.client-photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+}
+
+.review p {
+    max-width: 600px;
+    text-align: left;
+}
+footer {
+    background-color: #8a8585;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 2em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.footer-content .column {
+    flex: 1;
+    padding: 1em;
+}
+
+.footer-content .column h3 {
+    margin-bottom: 0.5em;
+}
+
+.footer-content .column p {
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content .column {
+        padding: 0.5em 0;
+    }
+}
+.bi {
+    color: rgb(255, 255, 255);
+}
+
+/* Hide the navigation menu on mobile devices */
+/* Stiluri pentru meniu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Stiluri pentru meniu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    /* Important pentru a putea poziționa submeniul */
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Stiluri pentru submeniul ascuns */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(156, 156, 156, 0.7);
+    min-width: 140px;
+    box-shadow: 0px 6px 10px 0px rgba(241, 240, 240, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a.active {
+    text-decoration: underline;
+    color: black;
+}
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+    text-decoration: underline;
+    color: black;
+}
+/* Afișează submeniul la hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Stiluri pentru meniu lateral pe mobil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.menu-toggle span {
+    height: 2px;
+    width: 25px;
+    background: white;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200px;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}

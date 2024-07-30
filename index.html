@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ7x-cJK_5z1cP-QUBj007-EuaTLaqGvc&callback=initMap"
+        defer></script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="AutoCraft Logo">
+        </div>
+        <nav id="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="service1.html">Service 1</a></li>
+                        <li><a href="service2.html">Service 2</a></li>
+                        <li><a href="service3.html">Service 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero-home">
+            <video autoplay muted loop class="hero-video">
+                <source src="AutoCraft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+        </section>
+        <section id="about-us" class="about-us">
+            <div class="container">
+                <h1 class="section-title">About Us</h1>
+                <div class="info-blocks">
+                    <div class="info-block">
+                        <h2>Company History</h2>
+                        <p id="history-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="info-block">
+                        <h2>Our Values</h2>
+                        <p id="values-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="info-block">
+                        <h2>Mission & Vision</h2>
+                        <p id="mission-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <div class="footer-logo">
+                <img src="logo.png" alt="AutoCraft Logo">
+            </div>
+            <div class="column">
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="column">
+                <h3>Contact Us</h3>
+                <p>Address: 1234 Street, City, Country</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@autocraft.com</p>
+            </div>
+        </div>
+        <div class="footer-content">
+            <<div class="footer-social">
+                <a href="https://www.facebook.com/autocraft" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.twitter.com/autocraft" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/autocraft" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/autocraft" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2024 AutoCraft. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
